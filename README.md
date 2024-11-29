@@ -1,15 +1,15 @@
-# A3_2024.2-Docker
+# A3 2024.2 - Sistemas Distribuídos e Mobile
 
 ## Passos para rodar a aplicação:
 
 - Clone o repositório no diretório desejado
 ```
-git clone https://github.com/deveju/A3_2024.2-Docker.git
+git clone https://github.com/deveju/A3-SDM-2024.2-DOCKER.git
 ```
 
-- Navegue até o repositório clonado
+- Navegue até o código-fonte do repositório clonado
 ```
-cd A3_2024.2-Docker
+cd A3-SDM-2024.2-DOCKER/A3_2024.2-Docker
 ```
 
 - Suba os serviços:
