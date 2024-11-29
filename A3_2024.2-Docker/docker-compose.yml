@@ -1,0 +1,34 @@
+services:
+  cliente:
+    build:
+      context: ./cliente
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+    environment:
+      - NODE_NO_WARNINGS=1
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server/banco_de_dados.db:/app/banco_de_dados.db
+
+  relatorio:
+    build:
+      context: ./relatorio
+      dockerfile: Dockerfile
+    depends_on:
+      - server
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./server/banco_de_dados.db:/app/banco_de_dados.db
+
+volumes:
+  db-data:

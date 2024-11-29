@@ -1,0 +1,206 @@
+@import './colors.css';
+
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    padding-top: 35px;
+    overflow-y: hidden;
+    user-select: none;
+    background-color: #ddd;
+    font-family: sans-serif;
+}
+
+* :not(.top-menu, body, .menu-button, .active, div, .login-container *) {
+    margin-left: 20px;  
+}
+
+.top-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-menu); 
+    border-bottom: 2px solid var(--bg-main); 
+    box-shadow: -682.5px 3px 5px rgb(0,0,0,0.5), 682.5px 3px 5px rgb(0,0,0,0.5);
+}
+
+.menu-button {
+    flex: 1; 
+    padding: 10px;
+    border: none;
+    background-color: transparent; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; 
+}
+
+.menu-button:hover {
+    background-color: var(--bg-main);
+    color: #fff; 
+}
+
+.active {
+    background-color: var(--bg-main-15l);
+    color: #eee;
+    font-weight: bold;
+}
+
+.filterinput, .firstinput, .secondinput, .selectproduto, .selectvendedor, .buttons {
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 2.5px;
+    padding: 5px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+
+.vendedoresObj, .clientesObj, .pedidosObj {
+    white-space: pre-wrap;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+.vendedoresObj2, .pedidosObj2 {
+    padding-top: 5px;
+    color: var(--sub-text);
+}
+
+.nomelist {
+    color: var(--sub-text);
+}
+
+.nomelistid {
+    color: var(--main-text);
+}
+
+.nomelistpreco {
+    color: var(--main-text);
+}
+
+.summaryVendedor, .summaryPedido {
+    /* font-weight: 700; */
+    list-style: none;
+    pointer-events: none;
+}
+
+.filterprod {
+    margin-top: 15px;
+    margin-left: 60px;
+}
+
+li {
+    user-select: text;
+}
+
+#prodcontainer, #clientescontainer, #vendedorescontainer, #pedidoscontainer {
+    width: 100%;
+    border-top: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    outline: 2px solid var(--bg-main-15l);
+    margin-top: 2.75vh;
+    height: 66.5vh;
+    overflow-y: scroll;
+}
+
+.titlepedidos, .titleprodutos, .titleclientes, .titlevendedores, #gerpedidostitle, #gervendedorestitle, #gerclientestitle, #gerprodutostitle {
+    margin-top: 40px;
+}
+
+.selectlarger {
+    width: 500px;
+}
+
+.selecthalf, .halflarger {
+    width: 250px;
+}
+
+#listpedidosscroll {
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow-y: scroll;
+    max-height: 100px;
+    max-width: 95%;
+    line-height: 22.5px;
+    padding: 10px;
+}
+
+.liitens {
+    background-color: var(--bg-main-85l);
+    padding: 5px;
+    list-style: none;
+    margin: 5px 0px;
+    left: 0;
+    border: 2px solid var(--bg-main-75l);
+    border-radius: 3px;
+    width: 94%;
+}
+
+.summaryVendedor::before, .summaryPedido::before {
+    background-color: transparent;
+    content: '\25B6';
+    user-select: none;
+    display: inline-block;
+    height: 21px;
+    width: 21px;
+    pointer-events: auto; 
+    cursor: pointer;
+}
+
+details[open] .summaryVendedor::before, details[open] .summaryPedido::before {
+    content: '\25BC'; 
+}
+
+#bottom-text {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    bottom: -12px;
+    left: 50%;
+    font-weight: 700;
+    color: var(--sub-text);
+}
+
+.produto-id, .produto-preco, .vendedor-id, .vendedor-email-title, .span-divider, .pedido-id, .pedido-data-title, .pedido-total-title, .produto-quantidade, .produto-total, .produto-id {
+    color: var(--main-text);
+}
+
+.produto-nome, .vendedor-nome, .vendedor-email, .pedido-cliente, .pedido-data, .pedido-total {
+    color: var(--sub-text-lighter);
+}
+
+.comvendedor {
+    color: var(--green-color);
+}
+
+.semvendedor {
+    color: var(--red-color);
+}
+
+/*
+.filterinput {
+
+}
+
+.firstinput {
+
+}
+
+.secondinput {
+
+}
+
+.selectproduto {
+
+}
+
+.selectvendedor {
+
+}
+
+.buttons {
+
+}
+*/
