@@ -4,7 +4,7 @@
 
 - Clone o repositório no diretório desejado
 ```
-git clone https://github.com/deveju/A3-SDM-2024.2-DOCKER.git
+git clone https://github.com/zhucssz/A3-SDM-2024.2-DOCKER.git
 ```
 
 - Navegue até o código-fonte do repositório clonado
